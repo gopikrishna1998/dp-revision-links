@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>📚 DP Revision Links</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', sans-serif;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #bb86fc;
+    }
+
+    section {
+      background-color: #1e1e1e;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      color: #03dac6;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin: 0.4rem 0;
+    }
+
+    a {
+      color: #82aaff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      padding: 0.6rem 1.2rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background-color: #3700b3;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #6200ee;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>📚 Design Patterns Revision Links</h1>
+
+  <!-- Creational -->
+  <section>
+    <h2>Creational</h2>
+    <ul id="group13">
+      <li><a href="https://github.com/gopikrishna1998/design-patterns/blob/main/Creational/FactoryMethod.java" target="_blank">Factory Method</a></li>
+      <li><a href="https://github.com/gopikrishna1998/design-patterns/blob/main/Creational/AbstractFactory.java" target="_blank">=Abstract Factory</a></li>
+      <li><a href="https://github.com/gopikrishna1998/design-patterns/blob/main/Creational/Builder.java" target="_blank">Builder</a></li>
+      <li><a href="https://github.com/gopikrishna1998/design-patterns/blob/main/Creational/Prototype.java" target="_blank">Prototype</a></li>
+      <li><a href="https://github.com/gopikrishna1998/design-patterns/blob/main/Creational/Singleton.java" target="_blank">Singleton</a></li>
+    </ul>
+    <button onclick="openGroup('group13')">Open All</button>
+  </section>
+
+  <!-- Dynamic Programming - 2 -->
+  <section>
+    <h2>Dynamic Programming - 2</h2>
+    <ul id="group14">
+      <li><a href="https://leetcode.com/problems/minimum-path-sum/description/" target="_blank">Minimum Path Sum</a>
+      </li>
+      <li><a href="https://leetcode.com/problems/coin-change/description/" target="_blank">Coin Change</a></li>
+      <li><a href="https://leetcode.com/problems/partition-equal-subset-sum/description/" target="_blank">Partition
+          Equal Subset Sum</a></li>
+      <li><a href="https://leetcode.com/problems/minimum-cost-to-cut-a-stick/description/" target="_blank">Minimum Cost
+          to Cut a Stick</a></li>
+      <li><a href="https://www.geeksforgeeks.org/problems/egg-dropping-puzzle-1587115620/1" target="_blank">Egg Dropping
+          Puzzle</a></li>
+      <li><a href="https://leetcode.com/problems/word-break/description/" target="_blank">Word Break</a></li>
+      <li><a href="https://www.geeksforgeeks.org/problems/palindromic-patitioning4845/1" target="_blank">Palindromic
+          Partitioning</a></li>
+      <li><a href="https://www.geeksforgeeks.org/problems/job-sequencing-problem-1587115620/1" target="_blank">Job
+          Sequencing Problem</a></li>
+    </ul>
+    <button onclick="openGroup('group14')">Open All</button>
+  </section>
+
+  <!-- Dynamic Programming - 1 -->
+  <section>
+    <h2>Dynamic Programming - 1</h2>
+    <ul id="group15">
+      <li><a href="https://leetcode.com/problems/maximum-product-subarray/description/" target="_blank">Maximum Product
+          Subarray</a></li>
+      <li><a href="https://leetcode.com/problems/longest-increasing-subsequence/description/" target="_blank">Longest
+          Increasing Subsequence</a></li>
+      <li><a href="https://leetcode.com/problems/longest-common-subsequence/description/" target="_blank">Longest Common
+          Subsequence</a></li>
+      <li><a href="https://takeuforward.org/plus/dsa/problems/0-and-1-knapsack" target="_blank">0/1 Knapsack</a></li>
+      <li><a href="https://leetcode.com/problems/edit-distance/description/" target="_blank">Edit Distance</a></li>
+      <li><a href="https://www.geeksforgeeks.org/problems/maximum-sum-increasing-subsequence4749/1"
+          target="_blank">Maximum Sum Increasing Subsequence</a></li>
+      <li><a href="https://www.geeksforgeeks.org/problems/matrix-chain-multiplication0303/1" target="_blank">Matrix
+          Chain Multiplication</a></li>
+    </ul>
+    <button onclick="openGroup('group15')">Open All</button>
+  </section>
+
+  <script>
+    function openGroup(groupId) {
+      document.querySelectorAll(`#${groupId} a`)
+        .forEach(link => window.open(link.href, '_blank'));
+    }
+
+    // Save scroll position before the page unloads (using localStorage)
+    window.addEventListener('beforeunload', () => {
+      localStorage.setItem('scrollY', window.scrollY);
+    });
+
+    // Restore scroll position when the page loads (using localStorage)
+    window.addEventListener('load', () => {
+      const scrollY = localStorage.getItem('scrollY');
+      if (scrollY !== null) {
+        window.scrollTo(0, parseInt(scrollY));
+      }
+    });
+  </script>
+</body>
+
+</html>
